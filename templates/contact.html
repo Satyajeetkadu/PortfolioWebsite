@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<main id="main">
+
+    <div class="container">
+        <div class="row section recentworks topspace">
+			
+			<h2 class="section-title"><span>Get in touch with me</span></h2>
+
+
+
+        <div class="row topspace">
+            <div class="col-sm-8 col-sm-offset-2">
+                                                            
+                <article class="post">
+
+                    <div class="entry-content">
+                
+                        <form action="{{ url_for('contact') }}" method=post>
+                            {{ form.hidden_tag() }}
+                         
+                            {{ form.name.label }}
+                            {{ form.name }}
+                         
+                            {{ form.email.label }}
+                            {{ form.email }}
+                         
+                            {{ form.subject.label }}
+                            {{ form.subject }}
+                         
+                            {{ form.message.label }}
+                            {{ form.message }}
+                         
+                            {{ form.submit }}
+                            {% for mesg in get_flashed_messages() %}
+                            <h3>{{ mesg }}</h3>
+                            {% endfor %}
+                          </form>
+                    
+                    </div>
+                </article>
+</main>  
+
+{% endblock content %}

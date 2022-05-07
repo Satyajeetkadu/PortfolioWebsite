@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main id="main">
+
+		<div class="container">
+		<div class="row section topspace">
+			<div class="col-md-12">
+				<p class="lead text-center text-muted">Be the designer of your world and not merely the consumer of it - James Clear</p>
+			</div>
+        </div>
+		
+		<div class="row section featured topspace">
+			<h2 class="section-title"><span>My Interests</span></h2>
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<h3 class="text-center">Weight-Lifting</h3>
+					<p>How lifting weights changed my life</p>
+					<p class="text-center"><a href="{{url_for('weightlifting')}}" class="btn btn-action">Read more</a></p>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h3 class="text-center">Football</h3>
+                    <p>What football has taught me </p>
+					<p class="text-center"><a href="{{url_for('football')}}" class="btn btn-action">Read more</a></p>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h3 class="text-center">Reading</h3>
+                    <p>How reading has improved me</p>
+					<p class="text-center"><a href="{{url_for('reading')}}" class="btn btn-action">Read more</a></p>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h3 class="text-center">Technology</h3>
+                    <p>How technology fascinates me </p>
+					<p class="text-center"><a href="{{url_for('technology')}}" class="btn btn-action">Read more</a></p>
+				</div>
+			</div>
+		</div>
+</main>        
+{% endblock content %}
+ 
